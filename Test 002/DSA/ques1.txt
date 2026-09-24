@@ -1,0 +1,57 @@
+Buy and Sell Stocks 3
+Difficulty: HARD | Max Score: 75
+You are given an array prices[], where prices[i] represents the price of a stock on the i-th day. Your task is to determine the maximum profit you can achieve by performing at most two transactions.
+
+
+
+A transaction consists of:
+
+Buying one stock, and
+Selling that stock later. 
+
+
+Important Rules
+
+You may complete at most two transactions.
+You cannot hold more than one stock at a time (i.e., you must sell the stock before buying again).
+
+
+Input Format
+
+The first line contains an integer n, the number of days.
+The second line contains n space-separated integers representing the array prices[].
+
+
+Output Format
+
+Print a single integer — the maximum profit achievable.
+
+
+Constraints:
+
+1 ≤ n ≤ 105
+0 ≤ prices[i] ≤ 105
+
+
+Example 1:
+
+Input: 
+8
+3 3 5 0 0 3 1 4
+
+Output: 6
+
+Explanation: Buy on day 4 (price = 0), sell on day 6 (price = 3), and profit = 3 - 0 = 3.
+Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4 - 1 = 3.
+
+
+Example 2:
+
+Input: 
+5
+1 2 3 4 5
+
+Output: 4
+
+Explanation: Buy on day 1 (price = 1), sell on day 5 (price = 5), and profit = 5 - 1 = 4.
+Note that you cannot buy on day 1, buy on day 2, and sell them later, as you are engaging in multiple transactions simultaneously. You must sell before buying again.

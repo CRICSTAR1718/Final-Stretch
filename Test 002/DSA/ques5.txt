@@ -1,0 +1,62 @@
+Partitions with Given Difference
+Difficulty: MEDIUM | Max Score: 50
+Given an array arr[] and an integer diff, count the number of ways to partition the array into two subsets such that the difference between their sums is equal to diff.
+
+
+
+Note: A partition of the array means dividing it into two subsets, say S1 and S2, such that the union of S1 and S2 is equal to the original array and each element is present in only one of the subsets.
+
+
+
+
+
+Input Format
+
+First line: integer n (size of arr).
+
+Second line: n space-separated integers — the elements of arr.
+
+Third line: integer diff.
+
+
+
+Output Format
+
+A single integer — the number of ways to partition arr into two subsets whose sums differ by exactly diff.
+
+
+
+
+
+Constraints
+
+1 ≤ arr.size() ≤ 50
+0 ≤ diff ≤ 50
+0 ≤ arr[i] ≤ 6
+
+
+
+
+Example 1
+
+Input:
+4
+5 2 6 4
+3
+
+Output:
+1
+Explanation: There is only one possible partition of this array. Partition: [6, 4], [5, 2]. The difference between the subset sums is: (6 + 4) - (5 + 2) = 3.
+
+
+
+Example 2
+
+Input:
+4
+1 1 1 1
+0
+
+Output:
+6
+Explanation: We can choose any two of the four 1's to form one subset and the remaining two form the other subset. There are 6 ways to choose 2 elements out of 4 (indices [0,1], [0,2], [0,3], [1,2], [1,3], [2,3]), so there are 6 valid partitions.

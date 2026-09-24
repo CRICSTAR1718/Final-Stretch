@@ -1,0 +1,42 @@
+Unique Digits
+Difficulty: MEDIUM | Max Score: 50
+Given an integer N, return the count of all numbers x having all the digits unique(no repeated digits) , where 0 ≤ x < 10N.
+
+
+
+Input Format:
+
+The first and only line of input contains a single integer N.
+
+
+Output Format:
+
+Output a single integer - the number of all such numbers that satisfy the given condition.
+
+
+
+
+Constraints:
+
+0 ≤ n ≤ 10
+
+
+Example 1:
+
+Input
+2
+
+Output:
+91
+
+Explanation:
+The answer includes all numbers from 0 to 99, excluding those with repeated digits such as 11, 22, 33, 44, 55, 66, 77, 88, and 99.
+
+
+Example 2:
+
+Input:
+0
+
+Output:
+1

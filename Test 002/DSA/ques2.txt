@@ -1,0 +1,59 @@
+Building a Pyramid of Blocks
+Difficulty: MEDIUM | Max Score: 50
+You are stacking blocks to form a pyramid. The pyramid has numLevels, where:
+
+The first level always contains one block with value 1.
+Each new level starts and ends with 1.
+Each middle block in a level is the sum of the two blocks directly above it from the previous level.
+
+
+Your task is to build the first numLevels of the pyramid and display the arrangement of blocks.
+
+
+
+Input Format
+
+A single integer numLevels — the number of levels in the pyramid.
+
+
+Output Format
+
+Print the pyramid levels, each on a new line.
+The numbers should be space-separated.
+
+
+Constraints
+
+1 ≤ numLevels ≤ 30
+The output will contain at most 30 rows, with each row containing at most 30 numbers.
+Each number in the output will fit within a 32-bit signed integer.
+
+
+Example 1:
+
+Input: 5
+Output:
+1 
+1 1 
+1 2 1 
+1 3 3 1 
+1 4 6 4 1 
+
+Explanation:
+Row 1: Always starts with 1.
+Row 2: Two 1s because each new row starts and ends with 1.
+Row 3: The middle value is 2 (sum of 1 + 1 from the row above).
+Row 4: The two middle values are 3 and 3, calculated as:
+       3 = 1 + 2
+       3 = 2 + 1
+Row 5: The three middle values are 4, 6, and 4, calculated as:
+       4 = 1 + 3
+       6 = 3 + 3
+       4 = 3 + 1
+
+
+Example 2:
+
+Input: 1
+Output: 1
+Explanation: Since numLevels = 1, we only have the first row, which is just 1.
