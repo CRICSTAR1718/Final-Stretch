@@ -1,0 +1,71 @@
+News Distribution
+Difficulty: MEDIUM | Max Score: 50
+In some social network, there are n users communicating with each other in m groups of friends. Let's analyze the process of distributing some news between users.
+
+Initially, some user x receives the news from some source. Then he or she sends the news to his or her friends (two users are friends if there is at least one group such that both of them belong to this group). Friends continue sending the news to their friends, and so on. The process ends when there is no pair of friends such that one of them knows the news, and another one doesn't know.
+
+
+
+For each user x you have to determine what is the number of users that will know the news if initially only user x starts distributing it.
+
+
+
+
+
+Input Format
+
+The first line contains two integers n and m — the number of users and the number of groups of friends, respectively.
+
+Then m lines follow, each describing a group of friends. The i-th line begins with integer ki — the number of users in the i-th group. Then ki distinct integers follow, denoting the users belonging to the i-th group.
+
+
+
+It is guaranteed that ∑i=1m ki ≤ 5⋅105.
+
+
+
+
+
+Output Format
+
+Print n integers, space-separated. The i-th integer should be equal to the number of users that will know the news if user i starts distributing it.
+
+
+
+
+
+Constraints
+
+1 ≤ n, m ≤ 5⋅105
+0 ≤ ki ≤ n
+The sum of ki over all groups does not exceed 5⋅105
+All users listed within a single group are distinct
+
+
+
+
+Example 1
+
+Input:
+7 5
+3 2 5 4
+0
+2 1 2
+1 1
+2 6 7
+
+Output:
+4 4 1 4 4 2 2
+Explanation: Group 1 connects users {2, 4, 5}. Group 2 is empty. Group 3 connects {1, 2}, merging user 1 into that group, forming {1, 2, 4, 5}. Group 4 contains only user 1 (no new connections). Group 5 connects {6, 7}. The final groups of friends are {1, 2, 4, 5}, {3}, and {6, 7}, giving component sizes 4, 4, 1, 4, 4, 2, 2 for users 1 through 7 respectively.
+
+
+
+Example 2
+
+Input:
+3 1
+0
+
+Output:
+1 1 1
+Explanation: There is only one group, and it is empty, so no two users are ever connected. Each of the 3 users forms their own group of size 1, so starting from any user, only that 1 user will know the news.

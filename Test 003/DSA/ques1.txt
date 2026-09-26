@@ -1,0 +1,40 @@
+King Anoop and Favorite Alphabet
+Difficulty: MEDIUM | Max Score: 50
+King Anoop has a family tree of N members and King Anoop sits at the root which is node 0. Everyone in the family tree strictly has 1 parent given by array parent except King Anoop at node 0. Everyone in the family has a favorite alphabet given by string favAlpha. King Anoop thinks that the admiration of a family member is defined by the number of descendants that have the same favorite alphabet as them. Help King Anoop find out the admiration of everyone in the family tree so that he can decide if he is most admired or not.
+
+
+
+Input Format:
+
+First line of input contains N i.e. the number of family members in King Anoop's family tree.
+
+Next line of input contains N space-separated integers given by parent, where parent[i] is the parent of ith family member. Note that parent[0] will be -1.
+
+Next line of input contains a string of length N given by favAlpha, where favAlpha[i] will be a letter representing the favorite alphabet of ith family member.
+
+
+
+Output Format:
+
+Print N space-separated integers representing the admiration of each family member i.e. number of descendants with the same favorite alphabet.
+
+
+
+Example 1:
+
+Input:
+6
+-1 0 0 1 1 2
+aabacb
+
+Output:
+2 1 1 0 0 0
+
+Explanation: Node 0 has 2 descendants (Node 1 and Node 3) that have the same favorite alphabet i.e. 'a'. Node 2 has node 5 as the descendant with the same favorite alphabet i.e. 'b'. Node 1 has node 3 as the descendant with the same favorite alphabet. Rest of the nodes do not have any descendants with the same favorite alphabet.
+
+
+Constraints:
+
+1 <= N <= 105
+0 <= parent[i] < N, parent[0] = -1
+favAlpha will only have lowercase English alphabet letters.

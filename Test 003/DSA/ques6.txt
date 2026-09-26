@@ -1,0 +1,63 @@
+Network Delay Time
+Difficulty: MEDIUM | Max Score: 50
+You are given a network of N nodes, labeled from 1 to N. You are also given times, a list of travel times as directed edges times[i] = [u, v, w], where u is the source node, v is the target node, and w is the time it takes for a signal to travel from source to target.
+
+We will send a signal from a given node K. Return the minimum time it takes for all the N nodes to receive the signal. If it is impossible for all the N nodes to receive the signal, return -1.
+
+
+
+Input Format
+
+The function receives three parameters:
+
+times: a 2D array/list of integers where each row represents a directed edge [u, v, w].
+n: the number of nodes.
+k: the source node.
+For STDIN: The first line contains two integers N (number of nodes) and M (number of edges). The next M lines each contain three space-separated integers u, v, and w. The last line contains a single integer K.
+
+
+
+Output Format
+
+Return an integer representing the minimum time it takes for all N nodes to receive the signal, or -1 if it is impossible.
+
+
+
+Constraints
+
+1 ≤ N ≤ 104
+1 ≤ M ≤ 5 × 104
+times[i] has length 3, 1 ≤ u, v ≤ N, u ≠ v
+0 ≤ w ≤ 105
+1 ≤ K ≤ N
+
+
+
+
+Example 1
+
+Input:
+4 3
+2 1 1
+2 3 1
+3 4 1
+2
+
+Output:
+2
+Explanation: The signal starts at node 2 (K = 2). Node 1 receives the signal at time 1. Node 3 receives the signal at time 1. Node 4 receives the signal at time 2. The minimum time for all nodes to receive the signal is max(1, 1, 2) = 2.
+
+
+
+
+
+﻿Example 2
+
+Input:
+2 1
+1 2 1
+2
+
+Output:
+-1
+Explanation: The signal starts at node 2 (K = 2). Since there is only a directed edge from 1 to 2, node 1 can never receive the signal. Hence, return -1.

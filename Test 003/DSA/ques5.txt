@@ -1,0 +1,65 @@
+Is Graph Bipartite
+Difficulty: MEDIUM | Max Score: 50
+Given an undirected graph represented as an adjacency list, check if it is bipartite.
+
+A graph is bipartite if we can partition its vertices into two independent sets A and B such that every edge in the graph connects a vertex in set A and a vertex in set B.
+
+
+
+Input Format
+
+The input consists of two parts:
+
+First line: an integer n representing the number of vertices in the graph.
+
+Next n lines: each line i starts with an integer k representing the number of neighbors for vertex i, followed by k space-separated integers representing the neighbor vertex indices.
+
+
+
+Output Format
+
+Print true if the graph is bipartite, and false otherwise.
+
+
+
+Constraints
+
+1 ≤ n ≤ 100
+0 ≤ graph[i].length < n
+0 ≤ graph[i][j] < n
+graph[i] does not contain i (no self-loops).
+All values of graph[i] are unique (no parallel edges).
+The graph is undirected (if v is in graph[u], then u is in graph[v]).
+
+
+
+
+Example 1
+
+Input:
+4
+3 1 2 3
+2 0 2
+3 0 1 3
+2 0 2
+
+Output:
+false
+Explanation: We cannot partition the nodes into two independent sets such that every edge connects a node in one set to a node in the other. (The graph is: 0-1, 0-2, 0-3, 1-2, 2-3, 1-0... which contains triangles/odd cycles).
+
+
+
+
+
+﻿Example 2
+
+Input:
+4
+2 1 3
+2 0 2
+2 1 3
+2 0 2
+
+Output:
+true
+Explanation: We can partition the vertices into two sets: {0, 2} and {1, 3}. Every edge connects a vertex from the first set to the second set.
